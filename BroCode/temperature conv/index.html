@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>title</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form>
+    <h1>TemperaTure Conversion:</h1>
+    <input type="number" id="textBox" value="0"><br>
+
+    <input type="radio" id="toFerenheight" name="unit">
+    <label for="toFerenheight">Celsius → Ferenheight</label>
+    <br>
+    <br>
+    <input type="radio" id="toCelsius" name="unit">
+    <label for="toCelsius">Ferenheight → Celsius</label>
+    <br>
+    <br>
+
+    <button type="button" onclick="convert()">Submit</button>
+    <p id="resoult"></p>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
