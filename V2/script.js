@@ -1,5 +1,6 @@
 // function walkDog(){
 
+
 //   return new Promise((resolve, reject) => {
 //     setTimeout(() => {
       
@@ -126,20 +127,25 @@
 //         console.log(data)
 //       })
 
+fetch("https://jsonplaceholder.typicode.com/todos/13333")
+    .then(res => res.json())
+    .then(data => console.log(data))
+
+
 // const user = {
 //   firstName: "Andria",
 //   lastName: "Lezhava"
 // }
 
-// const userCopy = JSON.parse(JSON.stringify(user))
+// const userCopy = JSON.parse(JSON.stringify(user)) // Deep copy of user object
 // console.log(user)
 
-// const parsed = JSON.parse('{"A": 1, "B": 2, "C": 3}') // To Parsed
-
-// const stringified = JSON.stringify({"A": 1, "B": 2, "C": 3}) // To Stringified
+// const parsed = JSON.parse('{"A": 1, "B": 2, "C": 3}') // Valid string to object
+// const stringified = JSON.stringify({"A": 1, "B": 2, "C": 3}) // Object to JSON string
 
 // console.log("Parsed: ", parsed)
 // console.log("Stringified: ", stringified)
+
 
 // const jsonString = '{"name":"Andria","age":16}';
 
@@ -152,33 +158,55 @@
 // '{"name":"Andria","age":16}' => .parse => {"name":"Andria","age":16} Stringify to Parse
 // {"name":"Andria","age":16} => .stringify => '{"name":"Andria","age":16}' Parse to Stringify
 
-console.log("Before Dogwalk")
+// console.log("Before Dogwalk");
 
-console.log("Before Dogwalk");
+// function Dogwalk() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const walkedDog = true;
 
-function Dogwalk() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const walkedDog = true;
+//       if (walkedDog) {
+//         resolve("You Walked the Dog! Good boy");
+//       } else {
+//         reject("You didn't walk the Dog! Bad boy");
+//       }
+//     }, 5000);
+//   });
+// }
 
-      if (walkedDog) {
-        resolve("You Walked the Dog! Good boy");
-      } else {
-        reject("You didn't walk the Dog! Bad boy");
-      }
-    }, 5000);
-  });
-}
+// function myFucn(){
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const cat = true
 
-async function walkTheDogFlow() {
-  try {
-    const result = await Dogwalk(); // wait for the dogwalk to finish
-    console.log(result);
-  } catch (error) {
-    console.log(error);
-  }
+//       if(cat){
+//         resolve("You Petted cat!")
+//       }else{
+//         reject("You didin't petted cat!")
+//       }
+//     })
+//   })
+// }
 
-  console.log("After Dogwalk");
-}
+// myFucn().then(value => console.log(value))
 
-walkTheDogFlow();
+// function myFunc(){
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const gavaseirne = true
+
+//       if (gavaseirne){
+//         resolve("Wow akustik nodos awame fafa")
+//       }else{
+//         reject("Ar awame akustik nodos fafa exla gabrazda")
+//       }
+//     }, 5000)
+//   })
+// }
+
+// myFunc()
+//   .then(nodo => console.log(nodo))
+
+// for(let i = 1; i > 20; i++){
+//   print(i)
+// }
